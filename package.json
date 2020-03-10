@@ -1,7 +1,6 @@
 {
     "scripts": {
         "cypress": "cypress run",
-        "cypress:chrome": "cypress run -b",
         "cypress:open": "cypress open"
     },
     "dependencies": {
