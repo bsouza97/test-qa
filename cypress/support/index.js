@@ -11,9 +11,8 @@ beforeEach('Login into system', () => {
 })
 
 after('Clear all books', () => {
-    cy.contains('Reservas', {timeout: 20000}).click()
     cy.contains('Minhas reservas').click()
-    cy.get('img[alt="Remover"]').each(($el) => {
+    cy.get('img[alt="Remover"]', {timeout: 15000}).each(($el) => {
         cy
         .wrap($el)
         .invoke('attr', 'style', 'visibility: visible').click()
