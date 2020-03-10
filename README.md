@@ -4,7 +4,8 @@ Requirements: npm
 
 # to install the project follow the steps bellow:
 
-1 - clone the project
+1 - clone the project:
+```git clone https://github.com/bsouza97/test-qa.git```
 
 2 - run command: 
 ```npm install```
