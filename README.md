@@ -1,5 +1,7 @@
 # test-qa
 
+Requirements: npm
+
 #to install the project fallow the steps bellow:
 
 1 - clone the project
