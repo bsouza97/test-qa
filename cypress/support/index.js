@@ -9,3 +9,14 @@ beforeEach('Login into system', () => {
     cy.get('[data-cy=password]').type(password)
     cy.get('[data-cy=submit]').click()
 })
+
+after('Clear all books', () => {
+    cy.contains('Reservas', {timeout: 20000}).click()
+    cy.contains('Minhas reservas').click()
+    cy.get('img[alt="Remover"]').each(($el) => {
+        cy
+        .wrap($el)
+        .invoke('attr', 'style', 'visibility: visible').click()
+        cy.contains('Sim').click()
+    })
+})

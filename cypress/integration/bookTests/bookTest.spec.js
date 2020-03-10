@@ -19,11 +19,11 @@ describe('Book a dependencie', () => {
         cy.get('button').contains('16:00 - 22:00').click()
 
         cy.get('textarea[id="event-description"]').should('have.value', 'test description 123')
-        cy.get('div[id="event-date"]').then(($date) => {
-            expect($date).to.have.text(`${day} de ${months[month]}`)
+        cy.get('div[id="event-date"]').then((date) => {
+            expect(date).to.have.text(`${day} de ${months[month]}`)
         })
-        cy.get('div[id="event-hour"]').then(($hour) => {
-            expect($hour).to.have.text('16:00 - 22:00')
+        cy.get('div[id="event-hour"]').then((hour) => {
+            expect(hour).to.have.text('16:00 - 22:00')
         })
 
         cy.get('#cancel-button').first().click()
